@@ -85,6 +85,15 @@ func (tester Tester) BeSameLength(expected, got interface{}, a ...interface{}) b
 	return false
 }
 
+/*
+BeNil checks whether the input is nil
+
+This corresponds to the function BeNil
+*/
+func (tester Tester) BeNil(got interface{}, a ...interface{}) bool {
+	return got == nil
+}
+
 func lenterface(val interface{}) (int, error) {
 	kind := reflect.TypeOf(val).Kind()
 	switch kind {

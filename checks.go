@@ -51,3 +51,17 @@ func BeSameLength(t TestingT, expected, got interface{}, a ...interface{}) bool 
 	mt := Tester{T: t}
 	return mt.BeSameLength(expected, got, a...)
 }
+
+
+/*
+BeNil checks whether the input is nil
+
+The return value will be true if the input is nil
+
+Additional output for any error message can be provided as additional parameters, as with fmt.Print.
+*/
+func BeNil(t TestingT, got interface{}, a ...interface{}) bool {
+	mt := Tester{T: t}
+	return mt.BeNil(got, a...)
+}
+

@@ -361,6 +361,17 @@ func TestBeSameLength(t *testing.T) {
 	}
 }
 
+var beNilTests = []struct {
+	name       string
+	expected   bool
+	got        interface{}
+	message    string
+	shouldPass bool
+	format     string
+}{
+
+func Test
+
 func stringToPointer(val string) *string {
 	return &val
 }
